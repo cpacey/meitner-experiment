@@ -13,6 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: ouzi-dev/commit-status-updater@v1.0.0
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
@@ -21,3 +22,7 @@ jobs:
       run: dotnet build src
     - name: Test
       run: dotnet test src
+    - if: always()
+      uses: ouzi-dev/commit-status-updater@v1.0.0
+      with:
+        status: "${{ job.status }}"
