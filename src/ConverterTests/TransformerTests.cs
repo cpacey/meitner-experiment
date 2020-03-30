@@ -20,6 +20,13 @@ namespace ConverterTests {
 				).Returns(
 					new[] { "lawrence has 19 items" }
 				);
+
+			yield return
+				new TestCaseData(
+					arg: new[] { "carl,5" }
+				).Returns(
+					new[] { "carl has 5 items" }
+				);
 		}
 
 		[TestCaseSource(nameof(TransformLines_TestCases))]
