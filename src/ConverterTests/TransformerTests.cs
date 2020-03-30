@@ -9,9 +9,9 @@ namespace ConverterTests {
 		public static IEnumerable<ITestCaseData> TransformLines_TestCases() {
 			yield return
 				new TestCaseData(
-					arg: new[] {"carl,19"}
+					arg: new[] {"jacob,19"}
 				).Returns(
-					new[] {"carl has 19 items"}
+					new[] {"jacob has 19 items"}
 				);
 		}
 
