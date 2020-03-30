@@ -16,9 +16,9 @@ namespace ConverterTests {
 
 			yield return
 				new TestCaseData(
-					arg: new[] { "lawrence,19" }
+					arg: new[] { "larry,19" }
 				).Returns(
-					new[] { "lawrence has 19 items" }
+					new[] { "larry has 19 items" }
 				);
 		}
 
